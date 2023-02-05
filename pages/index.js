@@ -3,6 +3,7 @@ import MainFooter from 'components/MainFooter';
 import styles from '../styles/home.module.scss';
 import InnovationSection from '../components/homepage/InnovationSection';
 import ServicesSection from '../components/homepage/ServicesSection';
+import AboutUsSection from '../components/homepage/AboutUsSection';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main className={styles.main}>
         <InnovationSection />
         <ServicesSection />
+        <AboutUsSection />
         <MainFooter />
       </main>
     </div>
