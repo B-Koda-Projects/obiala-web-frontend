@@ -1,0 +1,60 @@
+@import '../../mixins.module.scss';
+
+.creativitySection {
+  padding: 0rem;
+  position: relative;
+  margin: 6rem 0rem 4rem;
+  background-image: url('../../../public/images/homepage/creativity-background-2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center right;
+
+  .creativityContainer {
+    position: relative;
+    height: 55.2rem;
+    padding: 8.2rem 2rem 0rem;
+    background-image: url('../../../public/images/homepage/creativity-background-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include laptop {
+      background-size: contain;
+    }
+  }
+
+  .creativityContent {
+    position: relative;
+    max-width: 151rem;
+    margin: 0 auto;
+    text-align: center;
+    @include laptop {
+      text-align: left;
+    }
+  }
+  h1,
+  p {
+    color: #fff;
+    @include laptop {
+      max-width: 65.8rem;
+    }
+  }
+  h1 {
+    font-weight: 800;
+    font-size: 4rem;
+    line-height: 6rem;
+    letter-spacing: 0.16em;
+    margin: 0rem;
+    margin-bottom: 2.2rem;
+  }
+  p {
+    letter-spacing: 0.16rem;
+    margin: 0rem;
+    margin-bottom: 4.6rem;
+  }
+  a {
+    @include greenButton;
+    margin: auto;
+    @include laptop {
+      margin: 0rem;
+    }
+  }
+}

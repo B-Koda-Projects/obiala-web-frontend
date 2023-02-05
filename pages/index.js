@@ -4,6 +4,7 @@ import styles from '../styles/home.module.scss';
 import InnovationSection from '../components/homepage/InnovationSection';
 import ServicesSection from '../components/homepage/ServicesSection';
 import AboutUsSection from '../components/homepage/AboutUsSection';
+import CreativitySection from '../components/homepage/CreativitySection';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <InnovationSection />
         <ServicesSection />
         <AboutUsSection />
+        <CreativitySection />
         <MainFooter />
       </main>
     </div>

@@ -53,6 +53,29 @@
 }
 
 @mixin greenButton {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  letter-spacing: 0.16em;
+  padding: 1.7rem 4.4rem;
+  border-radius: 1rem;
+  background-color: #0ff299;
+  transition: 0.3s;
+  width: max-content;
+  cursor: pointer;
+  svg {
+    font-size: 2.6rem;
+  }
+  &:hover {
+    background-color: darken(#0ff299, 5);
+  }
+  &:disabled {
+    opacity: 0.5;
+  }
 }
 
 @mixin sectionLabel {

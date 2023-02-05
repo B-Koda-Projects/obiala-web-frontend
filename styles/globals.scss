@@ -16,6 +16,7 @@ a {
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth !important;
 }
 :root {
   --dark-blue: #14153f;
@@ -26,7 +27,6 @@ html {
 }
 body {
   font-size: 1.6rem;
-  scroll-behavior: smooth;
   p {
     font-weight: 500;
     font-size: 1.8rem;
