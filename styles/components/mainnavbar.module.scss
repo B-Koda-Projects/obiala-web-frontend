@@ -1,0 +1,80 @@
+@import '../mixins.module.scss';
+
+.mainNavbar {
+  background-color: transparent;
+  padding: 6rem 2rem 4rem;
+  .content {
+    max-width: 151rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hamburgerMenu {
+    display: flex;
+    align-items: center;
+    font-size: 4rem;
+    cursor: pointer;
+    color: var(--dark-blue);
+    @include laptop {
+      display: none;
+    }
+  }
+  .mobileOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(0.3rem);
+    z-index: 1;
+    transition: 0.5s;
+    @include laptop {
+      display: none;
+    }
+  }
+  .close {
+    position: absolute;
+    top: 1.4rem;
+    left: 1.4rem;
+    cursor: pointer;
+    font-size: 3rem;
+    @include laptop {
+      display: none;
+    }
+  }
+  .navigation {
+    // display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    gap: 5rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1rem;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: black;
+    transform: translateX(100%);
+    transition: 0.5s;
+    z-index: 2;
+    @include laptop {
+      position: relative;
+      justify-content: flex-end;
+      flex-direction: row;
+      background-color: transparent;
+      transform: translateX(0%);
+      .darkButton {
+        @include blueButton;
+      }
+    }
+  }
+}
