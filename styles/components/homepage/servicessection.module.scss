@@ -1,0 +1,120 @@
+@import '../../mixins.module.scss';
+
+.servicesSection {
+  background: white;
+  color: #091c29;
+  padding: 10rem 2rem;
+  position: relative;
+  .servicesContainer {
+    position: relative;
+    max-width: 151rem;
+    margin: 0 auto;
+    .top {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 80rem;
+      margin: 0 auto;
+      h1 {
+        font-weight: 700;
+        font-size: 3.6rem;
+        line-height: 3rem;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: #091c29;
+        margin: 0rem;
+      }
+      hr {
+        width: 90%;
+        max-width: 31.2rem;
+        height: 0.8rem;
+        background-color: var(--dark-orange);
+        border: none;
+        border-radius: 1rem;
+        margin-top: 1.5rem;
+        margin-bottom: 2.7rem;
+      }
+      .sectionLabel {
+        @include sectionLabel;
+        color: #9e007b;
+        background-color: #f0e7ff;
+      }
+    }
+    .serviceCards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.2rem;
+      @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include laptop {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .card {
+        background-color: #f7f7f7;
+        padding: 5rem 1.8rem;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        .icon {
+          flex: 1;
+          width: 8rem;
+          min-height: 8rem;
+          border-radius: 0.7rem;
+          background-color: #e4e3e1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #929096;
+          svg {
+            font-size: 4rem;
+          }
+        }
+        h2,
+        p {
+          margin: 0rem;
+        }
+        h2 {
+          flex: 2;
+          font-weight: 700;
+          font-size: 2.8re;
+          line-height: 3.6rem;
+          letter-spacing: 0.16em;
+          color: var(--dark-blue);
+        }
+        p {
+          flex: 6;
+          font-weight: 500;
+          font-size: 1.6rem;
+          line-height: 3rem;
+          letter-spacing: 0.03em;
+          color: #4f4f4f;
+        }
+      }
+      .card:nth-child(2) {
+        background-color: #fff1e1;
+        .icon {
+          background-color: #ffddbe;
+          color: var(--dark-orange);
+        }
+      }
+      .card:nth-child(3) {
+        background-color: #fceef2;
+        .icon {
+          background-color: #fedce6;
+          color: #fc316b;
+        }
+      }
+      .card:nth-child(4) {
+        background-color: #f4ebff;
+        .icon {
+          background-color: #e8d5ff;
+          color: #822182;
+        }
+      }
+    }
+  }
+}

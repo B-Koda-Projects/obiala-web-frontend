@@ -2,6 +2,7 @@ import Head from 'next/head';
 import MainFooter from 'components/MainFooter';
 import styles from '../styles/home.module.scss';
 import InnovationSection from '../components/homepage/InnovationSection';
+import ServicesSection from '../components/homepage/ServicesSection';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <InnovationSection />
+        <ServicesSection />
         <MainFooter />
       </main>
     </div>
