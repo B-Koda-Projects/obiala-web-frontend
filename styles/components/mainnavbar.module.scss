@@ -2,13 +2,17 @@
 
 .mainNavbar {
   background-color: transparent;
-  padding: 6rem 2rem 4rem;
+  padding: 6rem 0rem 4rem;
   .content {
     max-width: 151rem;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  .logo,
+  .hamburgerMenu {
+    z-index: 1;
   }
   .hamburgerMenu {
     display: flex;
@@ -29,7 +33,7 @@
     background-color: rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(0.3rem);
     z-index: 1;
-    transition: 0.5s;
+    transition: background-color 0.5s, backdrop-filter 0.5s;
     @include laptop {
       display: none;
     }
@@ -66,15 +70,15 @@
     transform: translateX(100%);
     transition: 0.5s;
     z-index: 2;
+    .darkButton {
+      @include blueButton;
+    }
     @include laptop {
       position: relative;
       justify-content: flex-end;
       flex-direction: row;
       background-color: transparent;
       transform: translateX(0%);
-      .darkButton {
-        @include blueButton;
-      }
     }
   }
 }

@@ -26,6 +26,14 @@ html {
 }
 body {
   font-size: 1.6rem;
+  scroll-behavior: smooth;
+  p {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    letter-spacing: 0.1em;
+    color: #4f4f4f;
+  }
 }
 
 .body-container {

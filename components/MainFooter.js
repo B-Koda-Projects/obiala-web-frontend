@@ -5,28 +5,31 @@ import {
   TwitterIcon
 } from './svgs/FigmaSVGs';
 import styles from 'styles/components/mainfooter.module.scss';
+import Link from 'next/link';
 
 const MainFooter = () => {
   return (
     <footer className={styles.mainFooter}>
       <div className={styles.content}>
         <div className={styles.logo}>
-          <LightLogo />
+          <Link href='/'>
+            <LightLogo />
+          </Link>
         </div>
         <div className={styles.bottomNav}>
-          <span>About</span>
-          <span>Contact Us</span>
+          <Link href='/'>About</Link>
+          <Link href='/'>Contact Us</Link>
         </div>
         <div className={styles.links}>
-          <span>
+          <Link href='/'>
             <FacebookIcon />
-          </span>
-          <span>
+          </Link>
+          <Link href='/'>
             <TwitterIcon />
-          </span>
-          <span>
+          </Link>
+          <Link href='/'>
             <InstagramIcon />
-          </span>
+          </Link>
         </div>
       </div>
     </footer>

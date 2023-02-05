@@ -40,7 +40,9 @@ const MainNavbar = () => {
     <div className={styles.mainNavbar}>
       <div className={styles.content}>
         <div className={styles.logo}>
-          <DarkLogo />
+          <Link href='/'>
+            <DarkLogo />
+          </Link>
         </div>
         <div
           className={styles.hamburgerMenu}

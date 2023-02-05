@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import MainFooter from '../components/MainFooter';
-import MainNavbar from '../components/MainNavbar';
+import MainFooter from 'components/MainFooter';
 import styles from '../styles/home.module.scss';
+import InnovationSection from '../components/homepage/InnovationSection';
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main className={styles.main}>
-        <MainNavbar />
+        <InnovationSection />
         <MainFooter />
       </main>
     </div>
