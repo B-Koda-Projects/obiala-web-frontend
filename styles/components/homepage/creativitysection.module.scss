@@ -11,7 +11,7 @@
 
   .creativityContainer {
     position: relative;
-    height: 55.2rem;
+    min-height: 55.2rem;
     padding: 8.2rem 2rem 0rem;
     background-image: url('../../../public/images/homepage/creativity-background-1.png');
     background-repeat: no-repeat;
@@ -24,9 +24,11 @@
   .creativityContent {
     position: relative;
     max-width: 151rem;
-    margin: 0 auto;
+    margin: 0rem auto;
     text-align: center;
+    padding-bottom: 4rem;
     @include laptop {
+      padding: 0rem;
       text-align: left;
     }
   }
