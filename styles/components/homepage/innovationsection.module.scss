@@ -24,14 +24,14 @@
     justify-content: space-between;
     @include laptop {
       flex-direction: row;
-      align-items: center;
+      // align-items: center;
     }
     .left,
     .right {
       flex: 1;
     }
     .left {
-      padding: 2rem 0rem;
+      padding: 6rem 0rem 3rem;
       text-align: center;
       // display: flex;
       // flex-direction: column;
@@ -51,12 +51,18 @@
         color: #091c29;
         margin: 0rem;
         margin-bottom: 1.6rem;
+        @include laptop {
+          max-width: 69.8rem;
+        }
         span {
           color: var(--dark-orange);
         }
       }
       p {
         margin-bottom: 3.6rem;
+        @include laptop {
+          max-width: 61.4rem;
+        }
       }
       .contactUs {
         @include blueButton;
