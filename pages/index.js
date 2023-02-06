@@ -7,6 +7,7 @@ import AboutUsSection from '../components/homepage/AboutUsSection';
 import CreativitySection from '../components/homepage/CreativitySection';
 import BuildSection from '../components/homepage/BuildSection';
 import FeedBackSection from '../components/homepage/FeedBackSection';
+import ContactUsSection from '../components/homepage/ContactUsSection';
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <CreativitySection />
         <BuildSection />
         <FeedBackSection />
+        <ContactUsSection />
         <MainFooter />
       </main>
     </div>

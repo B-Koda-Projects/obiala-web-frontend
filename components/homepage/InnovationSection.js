@@ -27,7 +27,7 @@ const InnovationSection = () => {
             will give maximum satisfaction and solve problems for your
             customers.
           </p>
-          <Link href='/' className={styles.contactUs}>
+          <Link href='/#contact' className={styles.contactUs}>
             Contact Us
           </Link>
         </div>

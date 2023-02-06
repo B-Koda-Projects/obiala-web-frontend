@@ -1,0 +1,98 @@
+@import '../../mixins.module.scss';
+
+.contactUsSection {
+  background-color: var(--dark-blue);
+  border-radius: 10rem 10rem 0rem 0rem;
+  padding: 6.3rem 2rem 7.2rem;
+  .contactUsContainer {
+    position: relative;
+    min-height: 38.2rem;
+    background: #080926;
+    border-radius: 1rem;
+    max-width: 151rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 1rem;
+    padding: 2rem;
+    @include laptop {
+      padding: 4rem 8rem;
+      flex-direction: row;
+      text-align: left;
+    }
+    .squiggle {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    .left,
+    .right {
+      position: relative;
+      flex: 1;
+      z-index: 1;
+    }
+
+    .left {
+      color: white;
+      h2 {
+        font-weight: 600;
+        font-size: 3.2rem;
+        line-height: 4rem;
+        letter-spacing: 0.16em;
+        @include laptop {
+          max-width: 29.9rem;
+        }
+      }
+      p {
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 3rem;
+        letter-spacing: 0.16em;
+        color: #fff;
+        @include laptop {
+          max-width: 42.4rem;
+        }
+      }
+    }
+    .right {
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        @include laptop {
+          max-width: 43.6rem;
+        }
+        input,
+        textarea {
+          width: 100%;
+          border: none;
+          outline: none;
+          font-weight: 600;
+          font-size: 1.2rem;
+          line-height: 1rem;
+          letter-spacing: 0.16em;
+          color: #4f4f4f;
+          background-color: white;
+          padding: 2rem 1rem;
+          border-radius: 0.6rem;
+        }
+        textarea {
+          resize: none;
+          height: 9.3rem;
+        }
+        button {
+          color: white;
+          background-color: var(--dark-orange);
+          border-radius: 0.6rem;
+          padding: 2rem 4rem;
+          width: 100%;
+          font-family: 'Poppins';
+        }
+      }
+    }
+  }
+}

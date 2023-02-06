@@ -5,6 +5,7 @@
   color: #091c29;
   padding: 10rem 2rem 30rem;
   position: relative;
+  overflow: hidden;
   .feedBackContainer {
     position: relative;
     max-width: 151rem;
@@ -44,10 +45,13 @@
     }
     .testimonialContainer {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
       margin-top: 6rem;
       gap: 2.8rem;
       justify-content: center;
+      grid-template-columns: 1fr;
+      @include laptop {
+        grid-template-columns: repeat(3, 1fr);
+      }
       .testimonial {
         display: flex;
         gap: 1.4rem;
@@ -81,5 +85,10 @@
         }
       }
     }
+  }
+  .squigglyLine {
+    position: absolute;
+    bottom: -1rem;
+    right: -1rem;
   }
 }

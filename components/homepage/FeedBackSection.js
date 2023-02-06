@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from 'styles/components/homepage/feedbacksection.module.scss';
-import { FeedBackIcon } from '../svgs/FigmaSVGs';
+import { FeedBackIcon, SquigglyLine } from '../svgs/FigmaSVGs';
 
 const FeedBackSection = () => {
   return (
@@ -82,6 +82,9 @@ const FeedBackSection = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className={styles.squigglyLine}>
+        <SquigglyLine />
       </div>
     </section>
   );

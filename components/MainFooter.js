@@ -17,8 +17,8 @@ const MainFooter = () => {
           </Link>
         </div>
         <div className={styles.bottomNav}>
-          <Link href='/'>About</Link>
-          <Link href='/'>Contact Us</Link>
+          <Link href='/#about'>About</Link>
+          <Link href='/#contact'>Contact Us</Link>
         </div>
         <div className={styles.links}>
           <Link href='/'>

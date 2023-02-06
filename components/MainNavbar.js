@@ -62,10 +62,20 @@ const MainNavbar = () => {
           <div className={styles.close} onClick={() => setMobileMenu(false)}>
             <IoClose />
           </div>
-          <Link href='/'>Careers</Link>
-          <Link href='/'>About Us</Link>
-          <Link href='/'>Contact Us</Link>
-          <Link href='/' className={styles.darkButton}>
+          <Link href='/' onClick={() => setMobileMenu(false)}>
+            Careers
+          </Link>
+          <Link href='/#about' onClick={() => setMobileMenu(false)}>
+            About Us
+          </Link>
+          <Link href='/#contact' onClick={() => setMobileMenu(false)}>
+            Contact Us
+          </Link>
+          <Link
+            href='/#contact'
+            className={styles.darkButton}
+            onClick={() => setMobileMenu(false)}
+          >
             Contact Us
           </Link>
         </nav>
