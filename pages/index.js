@@ -6,6 +6,7 @@ import ServicesSection from '../components/homepage/ServicesSection';
 import AboutUsSection from '../components/homepage/AboutUsSection';
 import CreativitySection from '../components/homepage/CreativitySection';
 import BuildSection from '../components/homepage/BuildSection';
+import FeedBackSection from '../components/homepage/FeedBackSection';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <AboutUsSection />
         <CreativitySection />
         <BuildSection />
+        <FeedBackSection />
         <MainFooter />
       </main>
     </div>
