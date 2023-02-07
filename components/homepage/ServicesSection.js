@@ -18,8 +18,8 @@ const ServicesSection = () => {
           <hr />
           <p>
             Here&apos;s a glimpse of our expert digital services, ranging from
-            web and mobile apps to corporate websites to UI/UX design and
-            graphic design services.
+            web and mobile apps to corporate websites, UI/UX design and graphic
+            design services.
           </p>
         </div>
         <div className={styles.serviceCards}>
