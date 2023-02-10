@@ -1,6 +1,7 @@
 import MainNavbar from 'components/MainNavbar';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect } from 'react';
 import styles from 'styles/components/homepage/innovationsection.module.scss';
 import {
   InnovationBackgroundDesign,
@@ -8,6 +9,26 @@ import {
 } from '../svgs/FigmaSVGs';
 
 const InnovationSection = () => {
+  useEffect(() => {
+    let images = document.querySelector('#innovation-images');
+    let text = document.querySelector('#innovation-text');
+
+    const cardObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.transform = 'translateY(0)';
+            entry.target.style.opacity = '1';
+          }
+        });
+      },
+      { rootMargin: '-50px' }
+    );
+
+    images ? cardObserver.observe(images) : null;
+    text ? cardObserver.observe(text) : null;
+  }, []);
+
   return (
     <section id='innovation' className={styles.innovationSection}>
       <MainNavbar />
@@ -15,7 +36,7 @@ const InnovationSection = () => {
         <InnovationBackgroundDesign />
       </div>
       <div className={styles.innovationContainer}>
-        <div className={styles.left}>
+        <div className={styles.left} id={`innovation-text`}>
           <div className={styles.sectionLabel}>
             <InnovationLabelIcon /> Innovation
           </div>
@@ -31,7 +52,7 @@ const InnovationSection = () => {
             Contact Us
           </Link>
         </div>
-        <div className={styles.right}>
+        <div className={styles.right} id={`innovation-images`}>
           <div className={styles.image}>
             <Image
               src={'/images/homepage/innovation-section-image-1.webp'}

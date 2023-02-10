@@ -19,11 +19,18 @@
       flex-direction: row;
       gap: 4rem;
     }
+    .left,
+    .right {
+      transform: translate(10rem, 5rem);
+      opacity: 0;
+      transition: 1s;
+    }
     .left {
       display: flex;
       align-items: flex-end;
       justify-content: center;
       max-width: 100%;
+      transform: translate(-10rem, 5rem);
       .image {
         position: relative;
         display: flex;

@@ -71,6 +71,8 @@
         gap: 1.2rem;
         flex-direction: column;
         text-align: center;
+        transform: translateX(100%);
+        transition: 0.2s;
         @include largephone {
           flex-direction: row;
           text-align: left;

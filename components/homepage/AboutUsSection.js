@@ -1,13 +1,33 @@
 import Image from 'next/image';
+import { useEffect } from 'react';
 import { BsCheckCircleFill, BsLaptopFill } from 'react-icons/bs';
 import styles from 'styles/components/homepage/aboutussection.module.scss';
 import { GroupIcon, ServicesLabelIcon } from '../svgs/FigmaSVGs';
 
 const AboutUsSection = () => {
+  useEffect(() => {
+    let images = document.querySelector('#about-image');
+    let text = document.querySelector('#about-text');
+
+    const cardObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.transform = 'translateY(0)';
+            entry.target.style.opacity = '1';
+          }
+        });
+      },
+      { rootMargin: '-50px' }
+    );
+
+    images ? cardObserver.observe(images) : null;
+    text ? cardObserver.observe(text) : null;
+  }, []);
   return (
     <section id='about' className={styles.aboutUsSection}>
       <div className={styles.aboutUsContainer}>
-        <div className={styles.left}>
+        <div className={styles.left} id='about-image'>
           <div className={styles.image}>
             <Image
               src={'/images/homepage/about-us-section-image-2.webp'}
@@ -18,7 +38,7 @@ const AboutUsSection = () => {
             />
           </div>
         </div>
-        <div className={styles.right}>
+        <div className={styles.right} id={`about-text`}>
           <div className={styles.sectionLabel}>
             <ServicesLabelIcon /> About Us
           </div>

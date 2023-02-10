@@ -5,12 +5,39 @@ import { ServicesLabelIcon } from 'components/svgs/FigmaSVGs';
 
 import styles from 'styles/components/homepage/servicessection.module.scss';
 import { UIUXDesignIcon } from '../svgs/FigmaSVGs';
+import { useEffect } from 'react';
 
 const ServicesSection = () => {
+  useEffect(() => {
+    let top = document.querySelector('#services-top');
+    let card1 = document.querySelector('#services-card-1');
+    let card2 = document.querySelector('#services-card-2');
+    let card3 = document.querySelector('#services-card-3');
+    let card4 = document.querySelector('#services-card-4');
+
+    const cardObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.transform = 'translateY(0)';
+            entry.target.style.opacity = '1';
+          }
+        });
+      },
+      { rootMargin: '-50px' }
+    );
+
+    top ? cardObserver.observe(top) : null;
+    card1 ? cardObserver.observe(card1) : null;
+    card2 ? cardObserver.observe(card2) : null;
+    card3 ? cardObserver.observe(card3) : null;
+    card4 ? cardObserver.observe(card4) : null;
+  }, []);
+
   return (
     <section id='services' className={styles.servicesSection}>
       <div className={styles.servicesContainer}>
-        <div className={styles.top}>
+        <div className={styles.top} id='services-top'>
           <div className={styles.sectionLabel}>
             <ServicesLabelIcon /> SERVICES
           </div>
@@ -23,7 +50,7 @@ const ServicesSection = () => {
           </p>
         </div>
         <div className={styles.serviceCards}>
-          <div className={styles.card}>
+          <div className={styles.card} id='services-card-1'>
             <div className={styles.icon}>
               <AiFillMobile />
             </div>
@@ -35,7 +62,7 @@ const ServicesSection = () => {
               frame work.
             </p>
           </div>
-          <div className={styles.card}>
+          <div className={styles.card} id='services-card-2'>
             <div className={styles.icon}>
               <BsLaptopFill />
             </div>
@@ -46,7 +73,7 @@ const ServicesSection = () => {
               attractive, useful, and responsive websites of any kind.
             </p>
           </div>
-          <div className={styles.card}>
+          <div className={styles.card} id='services-card-3'>
             <div className={styles.icon}>
               <UIUXDesignIcon />
             </div>
@@ -58,7 +85,7 @@ const ServicesSection = () => {
               and many more goals!
             </p>
           </div>
-          <div className={styles.card}>
+          <div className={styles.card} id='services-card-4'>
             <div className={styles.icon}>
               <BsMegaphoneFill />
             </div>
