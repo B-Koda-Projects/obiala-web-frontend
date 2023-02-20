@@ -45,14 +45,16 @@ const AboutUsSection = () => {
           <h1>Get to know who we are </h1>
           <hr />
           <p>
-            At Obiala we assure you of creating quality mobile and web
-            applications by making use of the right technology and approach in
-            creating digital products with our team of highly skilled
-            proffesionals we will help you in building a working scalable
-            application that will create value and solve user problems in turn
-            bringing desired business profit. We assist businesses in building
-            elite teams by hiring, developing, and managing tech talent
-            remotely.
+            At Obiala be rest assured that you would get quality mobile and web
+            applications. We apply the best technology and taking the most
+            rewarding approach into creating digital products within our team of
+            highly skilled professionals.
+          </p>
+          <p>
+            We assist our clients to build working scalable applications that
+            solve user problems and provide value. Furthermore, we assist
+            businesses in building elite teams by hiring, developing, and
+            managing tech talents remotely.
           </p>
           <div className={styles.statistics}>
             <div className={styles.clients}>

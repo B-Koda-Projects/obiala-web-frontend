@@ -41,8 +41,8 @@ const BuildSection = () => {
         <div className={styles.right}>
           <h1>Build with a solid team</h1>
           <p>
-            We do standard knowledge based skilled assesment test in other to
-            vett the talents we use get onboard
+            We do a standard knowledge based skill assessment test in order to
+            vet the talents we get onboard
           </p>
           <div className={styles.step} id='build-step-1'>
             <div className={styles.orangeBar}></div>
@@ -50,8 +50,8 @@ const BuildSection = () => {
             <div className={styles.stepDetails}>
               <span className={styles.title}>Assesments</span>
               <span>
-                We do standard knowledge based skilled assesment test in other
-                to vett the technical skills of the talents and ensure they are
+                We do a standard knowledge based skill assessment test in order
+                to vet the technical skills of the talents and ensure they are
                 eligible and with the right experience
               </span>
             </div>
@@ -62,9 +62,9 @@ const BuildSection = () => {
             <div className={styles.stepDetails}>
               <span className={styles.title}>Interview</span>
               <span>
-                For proper validaty and proof of competency of our talents we
-                take our time to conduct futher interviews to meet and know more
-                about them before getting them onboard
+                For proper validity and proof of competency of our talents we
+                take our time to conduct further interviews to meet with, and
+                learn more about the talent before recruiting them.
               </span>
             </div>
           </div>

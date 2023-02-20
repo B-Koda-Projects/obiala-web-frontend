@@ -92,9 +92,9 @@ const ServicesSection = () => {
             <h2>Branding & Graphics Design</h2>
             <p>
               For your business or startup to stand out you need to have a
-              unique identity we are here to help you in creating logos and
-              designs that allows your customers and clients to know what to
-              expect from your company
+              unique identity and selling point. We are here to help you create
+              logos and designs that would give clients insights on what value
+              proposition to expect from your company.
             </p>
           </div>
         </div>
