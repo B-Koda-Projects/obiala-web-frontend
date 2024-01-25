@@ -84,13 +84,15 @@
           resize: none;
           height: 9.3rem;
         }
-        button {
+        button,
+        a {
           color: white;
           background-color: var(--dark-orange);
           border-radius: 0.6rem;
           padding: 2rem 4rem;
           width: 100%;
           font-family: 'Poppins';
+          text-align: center;
         }
       }
     }
